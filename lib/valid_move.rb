@@ -7,7 +7,11 @@ if index.between?(0, 8) && !position_taken?(board, index)
 end
 
 def position_taken?(board, index)
-  if board[index] == nil || "" || " "
+  if board[index] == ""
+    return false
+  elsif board[index] == " "
+    return false
+  elsif board[index] == nil
     return false
   else
     return true
